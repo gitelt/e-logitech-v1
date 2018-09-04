@@ -2963,9 +2963,10 @@ function SaveClick(TranNo,PrintOK){
 function SaveClick2(TranNo,PrintOK){
     var lock="<%=vArApLock %>";
     if (lock != "Visible" && PrintOK == "yes") {
-	    PrintClick2("no");
+	    PrintClick2("yes");
 	    return false;
 	}
+
     document.getElementById("hDoInvoice").value="yes";
 
     if (document.form1.hConsigneeAcct.value == "" || document.form1.hConsigneeAcct.value == "0") {

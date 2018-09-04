@@ -4220,8 +4220,8 @@ function SaveClick(tNo, pOK){
 function SaveClick2(TranNo,PrintOK){
 
     var lock="<%=vArApLock %>";
-    if (lock != "Visible" && PrintOK == "yes") {
-	    PrintClick2("no");
+    if (PrintOK == "yes") {
+	    PrintClick2("yes");
 	    return false;
 	}
     if (document.form1.hConsigneeAcct.value == "" || document.form1.hConsigneeAcct.value == "0") {
@@ -4289,7 +4289,7 @@ function SaveClick2(TranNo,PrintOK){
 	document.form1.method = "POST";
 	document.form1.target = "_self";
 	form1.submit();
-	console.log(document.form1.action );
+console.log(document.form1.action );
 	
 }
 
@@ -4619,6 +4619,7 @@ function PrintClick(){
     form1.submit();
 }
 function PrintClick2(doInvoice) {
+//alert(doInvoice);
     /////////////////////////////////////////////////
     var iType = "A";
     var Sec = document.form1.hSec.value;
